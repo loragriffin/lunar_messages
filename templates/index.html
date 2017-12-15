@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block leftCol %}
+  <h4>Messages</h4>
+  {% for obj in list %}
+    <p>
+      {{ obj.user }}<br>
+      {{ obj.message }}<br>
+      {{ obj.timestamp }}
+    </p>
+    <hr>
+  {% endfor %}
+{% endblock %}
+
+{% block rightCol %}
+  <h4>Add Message</h4>
+  <form method='POST' action='' enctype="multipart/form-data">{% csrf_token %}
+    <div class="form-group">
+      <label>
+        {{ form.user.label_tag}}
+      </label>
+      {{ form.user }}
+      <br>
+      <label>
+        {{ form.message.label_tag }}
+      </label>
+      <br>
+      {{ form.message }}
+    </div>
+    <button type="submit" class="btn btn-info">Add Message</button>
+  </form>
+{% endblock %}

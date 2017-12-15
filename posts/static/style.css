@@ -1,0 +1,8 @@
+.leftCol {
+  height: calc(100vh - 70px);
+  overflow: scroll;
+}
+
+h4 {
+  margin-top: 10px;
+}
