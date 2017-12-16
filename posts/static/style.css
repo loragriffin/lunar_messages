@@ -1,8 +1,23 @@
 .leftCol {
-  height: calc(100vh - 70px);
+  height: calc(100vh - 58px);
   overflow: scroll;
+  background-color: #F2F7F7;
+  padding: 20px 50px 0 50px;
+}
+
+.rightCol {
+  padding: 20px 70px;
 }
 
 h4 {
   margin-top: 10px;
+  text-align: center;
+}
+
+small {
+  color: #8D9090;
+}
+
+label {
+  padding-top: 10px;
 }

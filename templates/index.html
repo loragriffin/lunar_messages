@@ -3,12 +3,12 @@
 {% block leftCol %}
   <h4>Messages</h4>
   {% for obj in list %}
+    <hr>
     <p>
       {{ obj.user }}<br>
       {{ obj.message }}<br>
-      {{ obj.timestamp }}
+      <small>{{ obj.timestamp }}</small>
     </p>
-    <hr>
   {% endfor %}
 {% endblock %}
 
@@ -17,14 +17,12 @@
   <form method='POST' action='' enctype="multipart/form-data">{% csrf_token %}
     <div class="form-group">
       <label>
-        {{ form.user.label_tag}}
+        User
       </label>
       {{ form.user }}
-      <br>
       <label>
-        {{ form.message.label_tag }}
+        Message
       </label>
-      <br>
       {{ form.message }}
     </div>
     <button type="submit" class="btn btn-info">Add Message</button>

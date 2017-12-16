@@ -6,22 +6,28 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
+    <!-- Fonts -->
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'style.css' %}">
 
   </head>
   <body>
     <nav class="navbar navbar-dark bg-dark">
-      <span class="navbar-brand">Lunar Messaging</span>
+      <span class="navbar-brand">
+        <img src="{% static 'logo.png' %}" width="30" height="30" alt="LM Logo">
+        Lunar Messaging
+      </span>
     </nav>
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-6 leftCol">
+        <div class="col-md-6 col-sm-12 leftCol">
           {% block leftCol %}
           {% endblock %}
         </div> <!-- End left column -->
-        <div class="col-6 rightCol">
+        <div class="col-md-6 col-sm-12 rightCol">
           {% block rightCol %}
           {% endblock %}
         </div> <!-- End right column -->
