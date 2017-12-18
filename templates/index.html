@@ -1,18 +1,6 @@
 {% extends "base.html" %}
 
 {% block leftCol %}
-  <h4>Messages</h4>
-  {% for obj in list %}
-    <hr>
-    <p>
-      {{ obj.user }}<br>
-      {{ obj.message }}<br>
-      <small>{{ obj.timestamp }}</small>
-    </p>
-  {% endfor %}
-{% endblock %}
-
-{% block rightCol %}
   <h4>Add Message</h4>
   <form method='POST' action='' enctype="multipart/form-data">{% csrf_token %}
     <div class="form-group">
@@ -27,4 +15,16 @@
     </div>
     <button type="submit" class="btn btn-info">Add Message</button>
   </form>
+{% endblock %}
+
+{% block rightCol %}
+  <h4>Messages</h4>
+  {% for obj in list %}
+    <hr>
+    <p>
+      {{ obj.user }}<br>
+      {{ obj.message }}<br>
+      <small>{{ obj.timestamp }}</small>
+    </p>
+  {% endfor %}
 {% endblock %}

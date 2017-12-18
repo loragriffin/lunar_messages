@@ -1,12 +1,12 @@
-.leftCol {
+.rightCol {
   height: calc(100vh - 58px);
   overflow: scroll;
   background-color: #F2F7F7;
   padding: 20px 50px 0 50px;
 }
 
-.rightCol {
-  padding: 20px 70px;
+.leftCol {
+  padding: 20px 70px 50px 70px;
 }
 
 h4 {
