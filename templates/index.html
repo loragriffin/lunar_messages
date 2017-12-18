@@ -22,9 +22,9 @@
   {% for obj in list %}
     <hr>
     <p>
-      {{ obj.user }}<br>
+      <small>{{ obj.user }}</small><br>
       {{ obj.message }}<br>
-      <small>{{ obj.timestamp }}</small>
+      <small class="gray">{{ obj.timestamp }}</small>
     </p>
   {% endfor %}
 {% endblock %}

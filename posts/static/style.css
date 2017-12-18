@@ -2,7 +2,7 @@
   height: calc(100vh - 58px);
   overflow: scroll;
   background-color: #F2F7F7;
-  padding: 20px 50px 0 50px;
+  padding: 20px 70px 0 70px;
 }
 
 .leftCol {
@@ -14,7 +14,7 @@ h4 {
   text-align: center;
 }
 
-small {
+.gray {
   color: #8D9090;
 }
 
